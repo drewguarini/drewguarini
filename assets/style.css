@@ -631,11 +631,6 @@ section { padding: 84px 0; }
 .meme-card {
   flex: 0 0 calc((100% - 40px) / 3);
   scroll-snap-align: start;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--white);
-  box-shadow: var(--shadow);
 }
 
 .meme-card img { width: 100%; height: auto; display: block; }
@@ -682,11 +677,11 @@ section { padding: 84px 0; }
 
 .video-logo {
   display: block;
-  height: 40px;
+  height: 64px;
   width: auto;
-  max-width: 82%;
+  max-width: 88%;
   object-fit: contain;
-  margin: 0 auto 14px;
+  margin: 0 auto 16px;
 }
 
 .play-overlay {
