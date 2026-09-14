@@ -11,7 +11,7 @@
   --sand: #d9c6a3;
   --white: #ffffff;
   --max: 1080px;
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --serif: "pacaembu", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --radius: 14px;
   --shadow: 0 12px 30px -14px rgba(30, 58, 76, 0.25);
