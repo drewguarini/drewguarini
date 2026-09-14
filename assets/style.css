@@ -763,7 +763,14 @@ section { padding: 84px 0; }
   justify-content: center;
 }
 
-.lbny-logo-frame img { max-height: 100%; max-width: 100%; object-fit: contain; display: block; }
+.lbny-card .lbny-logo-frame img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 
 .lbny-press-link,
 .lbny-ig-link {
@@ -775,8 +782,13 @@ section { padding: 84px 0; }
   box-shadow: var(--shadow);
 }
 
-.lbny-press-link img,
-.lbny-ig-link img { height: 100%; width: auto; display: block; }
+.lbny-card .lbny-press-link img,
+.lbny-card .lbny-ig-link img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  display: block;
+}
 
 .lbny-press-tag {
   position: absolute;
