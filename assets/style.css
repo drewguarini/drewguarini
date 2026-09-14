@@ -525,12 +525,53 @@ section { padding: 84px 0; }
 
 .meme-card img { width: 100%; height: auto; display: block; }
 
+.video-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  scroll-snap-align: start;
+}
+
+.video-phone {
+  background: #0c0d10;
+  border-radius: 38px;
+  padding: 12px;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.video-notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34%;
+  height: 22px;
+  background: #0c0d10;
+  border-radius: 0 0 14px 14px;
+  z-index: 2;
+}
+
+.video-phone video {
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  display: block;
+  border-radius: 26px;
+  background: #000;
+  object-fit: cover;
+}
+
+.video-caption {
+  margin: 12px 2px 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
 @media (max-width: 820px) {
-  .meme-card { flex-basis: calc((100% - 20px) / 2); }
+  .meme-card, .video-card { flex-basis: calc((100% - 20px) / 2); }
 }
 
 @media (max-width: 560px) {
-  .meme-card { flex-basis: 82%; }
+  .meme-card, .video-card { flex-basis: 82%; }
 }
 
 /* creative grid (memes/video placeholders) */

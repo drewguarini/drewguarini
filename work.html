@@ -39,8 +39,8 @@
         <p class="section-lede" style="margin-bottom:0;">Scroll-stopping memes across every category — from fast food to streaming to squirrels with guns.</p>
       </div>
       <div class="carousel-controls">
-        <button class="carousel-btn" type="button" data-dir="-1" aria-label="Scroll left">‹</button>
-        <button class="carousel-btn" type="button" data-dir="1" aria-label="Scroll right">›</button>
+        <button class="carousel-btn" type="button" data-dir="-1" data-target="memeCarousel" aria-label="Scroll left">‹</button>
+        <button class="carousel-btn" type="button" data-dir="1" data-target="memeCarousel" aria-label="Scroll right">›</button>
       </div>
     </div>
 
@@ -55,6 +55,89 @@
       <div class="meme-card"><img src="https://i.imgur.com/98Gto20.png" alt="Discovery Shark Week paid partnership meme" loading="lazy"></div>
       <div class="meme-card"><img src="https://i.imgur.com/JXLhTwP.png" alt="Squirrel with a Gun paid partnership meme" loading="lazy"></div>
       <div class="meme-card"><img src="https://i.imgur.com/JcJAeot.png" alt="Vlasic / Conagra paid partnership meme" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="max">
+    <div class="meme-section-head">
+      <div>
+        <h2 class="section-heading" style="margin-bottom:6px;">Doing Things — Video Work</h2>
+        <p class="section-lede" style="margin-bottom:0;">Custom video spots and skits produced for creator and brand partnerships. Tap to play.</p>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" type="button" data-dir="-1" data-target="videoCarousel" aria-label="Scroll left">‹</button>
+        <button class="carousel-btn" type="button" data-dir="1" data-target="videoCarousel" aria-label="Scroll right">›</button>
+      </div>
+    </div>
+
+    <div class="meme-carousel" id="videoCarousel">
+      <div class="video-card">
+        <div class="video-phone">
+          <div class="video-notch"></div>
+          <video controls playsinline preload="metadata" poster="assets/images/video-posters/amazon-rings-mcf.jpg">
+            <source src="assets/videos/amazon-rings-mcf.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-caption">Amazon Rings × Middle Class Fancy</p>
+      </div>
+      <div class="video-card">
+        <div class="video-phone">
+          <div class="video-notch"></div>
+          <video controls playsinline preload="metadata" poster="assets/images/video-posters/slimjim-mcf.jpg">
+            <source src="assets/videos/slimjim-mcf.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-caption">Middle Class Fancy × Slim Jim</p>
+      </div>
+      <div class="video-card">
+        <div class="video-phone">
+          <div class="video-notch"></div>
+          <video controls playsinline preload="metadata" poster="assets/images/video-posters/guinness-skit.jpg">
+            <source src="assets/videos/guinness-skit.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-caption">Guinness × Doing Things Skit</p>
+      </div>
+      <div class="video-card">
+        <div class="video-phone">
+          <div class="video-notch"></div>
+          <video controls playsinline preload="metadata" poster="assets/images/video-posters/mtn-dew-kookslams.jpg">
+            <source src="assets/videos/mtn-dew-kookslams.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-caption">Kookslams × Mountain Dew</p>
+      </div>
+      <div class="video-card">
+        <div class="video-phone">
+          <div class="video-notch"></div>
+          <video controls playsinline preload="metadata" poster="assets/images/video-posters/cvs-trashcanpaul.jpg">
+            <source src="assets/videos/cvs-trashcanpaul.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-caption">CVS × Trashcan Paul</p>
+      </div>
+      <div class="video-card">
+        <div class="video-phone">
+          <div class="video-notch"></div>
+          <video controls playsinline preload="metadata" poster="assets/images/video-posters/purina-doggos-1.jpg">
+            <source src="assets/videos/purina-doggos-1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-caption">Doggos Doing Things × Purina</p>
+      </div>
+      <div class="video-card">
+        <div class="video-phone">
+          <div class="video-notch"></div>
+          <video controls playsinline preload="metadata" poster="assets/images/video-posters/purina-doggos-2.jpg">
+            <source src="assets/videos/purina-doggos-2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-caption">Doggos Doing Things × Purina</p>
+      </div>
     </div>
   </div>
 </section>
@@ -206,11 +289,11 @@
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-var memeTrack = document.getElementById('memeCarousel');
 document.querySelectorAll('.carousel-btn').forEach(function (btn) {
   btn.addEventListener('click', function () {
+    var track = document.getElementById(btn.dataset.target);
     var dir = parseInt(btn.dataset.dir, 10);
-    memeTrack.scrollBy({ left: dir * memeTrack.clientWidth, behavior: 'smooth' });
+    track.scrollBy({ left: dir * track.clientWidth, behavior: 'smooth' });
   });
 });
 </script>
