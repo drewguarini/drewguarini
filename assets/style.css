@@ -224,26 +224,18 @@ section { padding: 84px 0; }
 
 .about-grid p { font-size: 1.05rem; color: var(--ink-soft); margin: 0 0 16px; }
 
-.about-photo { margin: 0; }
+.about-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
 
 .about-photo img {
   width: 100%;
   aspect-ratio: 2 / 3;
   object-fit: cover;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
   display: block;
 }
-
-.about-photo figcaption {
-  margin-top: 14px;
-  font-size: 0.9rem;
-  color: var(--ink-soft);
-  text-align: center;
-}
-
-.about-photo figcaption a { color: var(--teal); text-decoration: underline; text-decoration-color: var(--sand); text-underline-offset: 3px; }
-.about-photo figcaption a:hover { color: var(--coral); }
 
 /* ---------- brand strip ---------- */
 .brand-strip { background: var(--paper-dim); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
