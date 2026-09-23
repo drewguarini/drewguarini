@@ -753,7 +753,7 @@ section { padding: 84px 0; }
   gap: 28px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 20px 22%;
+  padding: 20px 16%;
   scrollbar-width: none;
 }
 
@@ -761,7 +761,7 @@ section { padding: 84px 0; }
 
 .campaign-card {
   flex: 0 0 auto;
-  height: 560px;
+  height: 760px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -777,20 +777,20 @@ section { padding: 84px 0; }
   display: block;
 }
 
-.campaign-card .video-phone { width: 271px; }
+.campaign-card .video-phone { width: 364px; }
 
 @media (max-width: 900px) {
   .campaign-layout { grid-template-columns: 1fr; }
   .campaign-carousel-wrap .carousel-controls { margin-top: 8px; }
-  .campaign-peek-carousel { padding: 16px 14%; }
-  .campaign-card { height: 460px; }
-  .campaign-card .video-phone { width: 223px; }
+  .campaign-peek-carousel { padding: 16px 12%; }
+  .campaign-card { height: 580px; }
+  .campaign-card .video-phone { width: 281px; }
 }
 
 @media (max-width: 560px) {
-  .campaign-peek-carousel { padding: 12px 8%; gap: 20px; }
-  .campaign-card { height: 400px; }
-  .campaign-card .video-phone { width: 194px; }
+  .campaign-peek-carousel { padding: 12px 6%; gap: 20px; }
+  .campaign-card { height: 480px; }
+  .campaign-card .video-phone { width: 235px; }
 }
 
 /* Long Beach, NY Memes carousel */
