@@ -494,6 +494,16 @@ section { padding: 84px 0; }
   margin: 0 0 14px;
 }
 
+.stat-bubble-label.stat-bubble-label-lg {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 14px;
+}
+
 .stat-pills {
   display: flex;
   flex-wrap: wrap;
