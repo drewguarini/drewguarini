@@ -675,7 +675,14 @@ section { padding: 84px 0; }
   width: auto;
   max-width: 88%;
   object-fit: contain;
-  margin: 0 auto 16px;
+  margin: 0 auto;
+}
+
+.video-subhed {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 8px 0 16px;
 }
 
 .play-overlay {
