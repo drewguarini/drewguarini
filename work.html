@@ -211,13 +211,13 @@
 
       <div class="campaign-carousel-wrap">
         <div class="carousel-controls" style="margin-bottom: 16px;">
-          <button class="carousel-btn" type="button" data-dir="-1" data-target="mtnDewCarousel" aria-label="Scroll left">‹</button>
-          <button class="carousel-btn" type="button" data-dir="1" data-target="mtnDewCarousel" aria-label="Scroll right">›</button>
+          <button class="carousel-btn" type="button" data-dir="-1" data-step="card" data-target="mtnDewCarousel" aria-label="Scroll left">‹</button>
+          <button class="carousel-btn" type="button" data-dir="1" data-step="card" data-target="mtnDewCarousel" aria-label="Scroll right">›</button>
         </div>
-        <div class="meme-carousel" id="mtnDewCarousel">
-          <div class="meme-card"><img src="assets/images/mtn-dew-memes/meme1.png" alt="Mountain Dew branded meme, ordinarypeoplememes" loading="lazy"></div>
-          <div class="meme-card"><img src="assets/images/mtn-dew-memes/meme2.png" alt="Mountain Dew branded meme" loading="lazy"></div>
-          <div class="video-card">
+        <div class="campaign-peek-carousel" id="mtnDewCarousel">
+          <div class="campaign-card"><img src="assets/images/mtn-dew-memes/meme1.png" alt="Mountain Dew branded meme, ordinarypeoplememes" loading="lazy"></div>
+          <div class="campaign-card"><img src="assets/images/mtn-dew-memes/meme2.png" alt="Mountain Dew branded meme" loading="lazy"></div>
+          <div class="campaign-card">
             <div class="video-phone">
               <div class="video-notch"></div>
               <div class="video-screen">
@@ -230,7 +230,7 @@
               </div>
             </div>
           </div>
-          <div class="video-card">
+          <div class="campaign-card">
             <div class="video-phone">
               <div class="video-notch"></div>
               <div class="video-screen">
@@ -243,7 +243,7 @@
               </div>
             </div>
           </div>
-          <div class="video-card">
+          <div class="campaign-card">
             <div class="video-phone">
               <div class="video-notch"></div>
               <div class="video-screen">
@@ -256,7 +256,7 @@
               </div>
             </div>
           </div>
-          <div class="video-card">
+          <div class="campaign-card">
             <div class="video-phone">
               <div class="video-notch"></div>
               <div class="video-screen">
@@ -269,7 +269,7 @@
               </div>
             </div>
           </div>
-          <div class="video-card">
+          <div class="campaign-card">
             <div class="video-phone">
               <div class="video-notch"></div>
               <div class="video-screen">
@@ -554,7 +554,12 @@ document.querySelectorAll('.carousel-btn').forEach(function (btn) {
   btn.addEventListener('click', function () {
     var track = document.getElementById(btn.dataset.target);
     var dir = parseInt(btn.dataset.dir, 10);
-    track.scrollBy({ left: dir * track.clientWidth, behavior: 'smooth' });
+    var amount = track.clientWidth;
+    if (btn.dataset.step === 'card' && track.firstElementChild) {
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      amount = track.firstElementChild.getBoundingClientRect().width + gap;
+    }
+    track.scrollBy({ left: dir * amount, behavior: 'smooth' });
   });
 });
 
