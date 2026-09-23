@@ -735,6 +735,23 @@ section { padding: 84px 0; }
 .creative-tile strong { color: var(--navy); font-family: var(--serif); font-size: 1.05rem; }
 .creative-tile span { font-size: 0.85rem; }
 
+/* campaign layout (stats + swipeable content, side by side) */
+.campaign-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.campaign-info .case-study-lede { margin-bottom: 20px; }
+
+.campaign-carousel-wrap .meme-carousel { align-items: flex-start; }
+
+@media (max-width: 900px) {
+  .campaign-layout { grid-template-columns: 1fr; }
+  .campaign-carousel-wrap .carousel-controls { margin-top: 8px; }
+}
+
 /* Long Beach, NY Memes carousel */
 .lbny-card {
   flex: 0 0 auto;
