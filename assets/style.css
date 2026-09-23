@@ -663,6 +663,12 @@ section { padding: 84px 0; }
   object-fit: cover;
 }
 
+.video-screen video:fullscreen,
+.video-screen video:-webkit-full-screen {
+  object-fit: contain;
+  background: #000;
+}
+
 .video-logo {
   display: block;
   height: 64px;
