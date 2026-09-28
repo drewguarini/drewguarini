@@ -821,15 +821,14 @@ section { padding: 84px 0; }
 .creative-tile strong { color: var(--navy); font-family: var(--serif); font-size: 1.05rem; }
 .creative-tile span { font-size: 0.85rem; }
 
-/* campaign layout (stats + swipeable content, side by side) */
+/* campaign layout (stats full-width, swipeable content below) */
 .campaign-layout {
-  display: grid;
-  grid-template-columns: minmax(240px, 300px) 1fr;
-  gap: 32px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.campaign-info, .campaign-carousel-wrap { min-width: 0; }
+.campaign-carousel-wrap { margin-top: 16px; }
 
 .campaign-info .case-study-lede { margin-bottom: 20px; }
 
@@ -866,7 +865,6 @@ section { padding: 84px 0; }
 .campaign-card .video-phone { width: 428px; }
 
 @media (max-width: 900px) {
-  .campaign-layout { grid-template-columns: 1fr; }
   .campaign-carousel-wrap .carousel-controls { margin-top: 8px; }
   .campaign-peek-carousel { padding: 16px 16% 16px 2%; }
   .campaign-card { height: 680px; }
