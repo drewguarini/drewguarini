@@ -554,6 +554,13 @@ section { padding: 84px 0; }
   justify-content: center;
 }
 
+.case-grid--pair {
+  grid-template-columns: repeat(2, minmax(0, 340px));
+  justify-content: center;
+}
+
+.case-grid--pair .case-figure-frame { aspect-ratio: 4 / 5; }
+
 .case-figure {
   margin: 0;
   background: var(--white);
@@ -583,6 +590,7 @@ section { padding: 84px 0; }
 
 @media (max-width: 560px) {
   .case-grid { grid-template-columns: 1fr; }
+  .case-grid--pair { grid-template-columns: minmax(0, 340px); }
 }
 
 /* storyboard sequence (Eric Fisher x Budweiser) */
