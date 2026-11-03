@@ -1085,6 +1085,10 @@ section { padding: 84px 0; }
 }
 
 @media (max-width: 560px) {
+  .site-nav .max { gap: 12px; }
+  .nav-mark img { height: 17px; }
+  .nav-links { gap: 0; }
+  .nav-links a { padding: 13px 8px; font-size: 0.8rem; }
   .nav-mark { font-size: 1rem; }
   .hero { min-height: 92vh; }
   .work-card { padding: 24px 20px; }
