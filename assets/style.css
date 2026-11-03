@@ -866,6 +866,35 @@ section { padding: 84px 0; }
   display: block;
 }
 
+.social-switch {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  margin: 4px 0 8px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.social-switch-btn {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--navy);
+  background: transparent;
+  border: 0;
+  padding: 8px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.social-switch-btn.is-active {
+  background: var(--navy);
+  color: #fff;
+}
+
+.social-panel[hidden] { display: none; }
+
 .campaign-card--mockup img {
   border-radius: 0;
   box-shadow: none;
