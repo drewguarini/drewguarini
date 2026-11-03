@@ -866,6 +866,11 @@ section { padding: 84px 0; }
   display: block;
 }
 
+.campaign-card--mockup img {
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .campaign-card .video-phone { width: 327px; }
 
 @media (max-width: 900px) {
